@@ -31,8 +31,8 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-console.log(typeof candidateAnswer);
-  if (candidateAnswers === correctAnswer) {
+
+  if (candidateAnswer === correctAnswer) {
     console.log("Correct!");
   } else {
     console.log(`Incorrect! The correct answer is ${correctAnswer}.`);
