@@ -66,13 +66,22 @@ Correct answer: ${correctAnswers[i]}
   return grade;
 }
 
+function passFail(grade) {
+  console.log(`${candidateName} recieved a score of ${grade}%.`);
+  if (grade >= 80) {
+    console.log(`Congratulations! ${candidateName} passed the quiz! :)`);
+  } else {
+    console.log(`Sorry! ${candidateName} failed the quiz! :(`);
+  }
+}
+
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
   console.log(`Hello, ${candidateName}!`);
   askQuestion();
   let grade = gradeQuiz(this.candidateAnswers);
-  console.log(`${candidateName} recieved a score of ${grade}%.`);
+  passFail(grade);
 }
 
 // ----------- Don't write any code or change any code below this line ---------- //
